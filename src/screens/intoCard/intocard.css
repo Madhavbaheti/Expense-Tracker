@@ -1,0 +1,133 @@
+.intocard-container {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  text-align: center;
+  padding: 20px;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+.input-section,
+.expenditure-table,
+.total-expenditure {
+  background-color: #34495e;
+  padding: 15px;
+  margin-top: 20px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+h1 {
+  color: #3498db;
+}
+
+#expenditureInput,
+#remarkInput,
+.add-button {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  border: 1px solid #3498db;
+  padding: 8px;
+  margin: 15px;
+  border-radius: 3px;
+  transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+input:focus,
+.add-button:focus {
+  outline: none;
+  border-color: #2980b9;
+}
+
+.add-button:hover {
+  background-color: #2980b9;
+  cursor: pointer;
+}
+
+.expenditure-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th,
+td {
+  border: 1px solid #2c3e50;
+  padding: 10px;
+  align-items: center;
+  justify-content: center;
+}
+
+th {
+  background-color: #3498db;
+  color: #ecf0f1;
+}
+
+tbody tr:hover {
+  background-color: #2c3e50;
+}
+
+.total-expenditure strong {
+  color: #e74c3c;
+  justify-content: center;
+}
+
+.cancel-button,.delete-button {
+  background-color: #e74c3c;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px; /* Adjust the border-radius as needed */
+  transition: background-color 0.3s ease-in-out;
+}
+
+.delete-button:hover {
+  background-color: #c0392b; /* Change color on hover */
+}
+
+.save-button, .update-button {
+  background-color: #4CAF50;
+  color: #ffffff;
+  border: none;
+  padding: 8px 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+ 
+}
+
+.save-button:disabled {
+  background-color: #8bcf8d;
+  cursor: no-drop;
+}
+
+.update-button:hover {
+  background-color: #45a049; /* Change color on hover */
+}
+
+.pdf-button {
+  background-color: #000000; /* Blue background color */
+  color: #ffffff; /* White text color */
+  border: none; /* Remove border */
+  padding: 10px 20px; /* Add padding */
+  font-size: 16px; /* Adjust font size */
+  cursor: pointer; /* Add pointer cursor on hover */
+  border-radius: 5px; /* Add rounded corners */
+  transition: background-color 0.3s ease, color 0.3s ease; /* Add smooth transition */
+}
+
+.pdf-button:hover {
+  background-color: #363636; /* Darker blue on hover */
+}
+
+.button-container {
+  display: flex;
+  align-items: center; /* Center items vertically */
+}
+
+/* Add margin to all buttons except the first one */
+.button-container button:not(:first-child) {
+  margin-left: 4px;
+}

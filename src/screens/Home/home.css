@@ -1,0 +1,136 @@
+
+
+body {
+  background-color: #1a1a1a !important;
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+}
+
+.cards-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
+}
+
+.card {
+  background-color: #0b4554 !important;
+  color: #fff;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.add-a-card-button {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 10%;
+  right: 45%;
+  transition:  0.3s ease-in-out;
+}
+
+.add-a-card-button:hover {
+  background-color: #56ac5a; /* Change to a slightly different shade on hover */
+  transform: scale(1.05); /* Optional: Add a slight scale effect on hover */
+}
+
+.add-a-card-input {
+  border: 1px solid #ddd;
+  border-radius: 5px; /* Adjust the border-radius as needed */
+  transition: border-color 0.3s ease-in-out;
+}
+
+.add-a-card-input:focus {
+  outline: none;
+  border-color: #56ac5a; /* Change border color on focus */
+}
+
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-content {
+  background-color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.overlay input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.error-message {
+  color: #ff3333;
+  margin-bottom: 10px;
+}
+
+.overlay-button {
+  background-color: #4CAF50;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.overlay-button:hover {
+  background-color: #45a049;
+}
+
+
+.card-enter {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.card-enter-active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card-text {
+  font-size: 1.2em;
+  margin-top: 10px;
+}
+
+.popup {
+  position: fixed;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #af4c4c;
+  color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  opacity: 1;
+  transition: 2s ease-in-out;
+  
+}
+
+.popup::after {
+  opacity: 0;
+}

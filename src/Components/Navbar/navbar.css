@@ -1,0 +1,55 @@
+/* navbar.css */
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.navbar-common {
+  background-color: #3c3c3c;
+  align-items: center;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  box-shadow: 0 0 5px rgba(255, 255, 255, 0.3); /* White shadow at the bottom */
+}
+
+.navbar-brand {
+  flex: 1;
+}
+
+.navbar-username {
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 1.2rem;
+}
+
+.navbar-list {
+  list-style-type: none;
+}
+
+
+.navbar-button {
+  background-color: #2ecc71;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  margin-left: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.navbar-logout {
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px; 
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar-logout:hover {
+  transform: scale(1.05); /* Optional: Add a slight scale effect on hover */
+}
+
+
+/* Add any additional styling as needed */
+
