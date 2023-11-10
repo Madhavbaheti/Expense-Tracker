@@ -1,7 +1,6 @@
 
 
 body {
-  background-color: #1a1a1a !important;
   color: #fff;
   font-family: 'Arial', sans-serif;
   margin: 0;
@@ -15,7 +14,8 @@ body {
 }
 
 .card {
-  background-color: #0b4554 !important;
+  background-color: rgb(35, 59, 66) !important;
+  opacity: 0.9;
   color: #fff;
   cursor: pointer;
   position: relative;

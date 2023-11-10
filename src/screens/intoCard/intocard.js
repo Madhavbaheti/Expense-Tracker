@@ -7,6 +7,7 @@ import autoTable from 'jspdf-autotable'
 import { saveData,deleteEntry,cardEntries } from "../../Api";
 import Button from "../../Components/Navbar/Button/Button";
 
+
 function Intocard() {
   
   const [inputValue, setInputValue] = useState("");
@@ -87,10 +88,9 @@ function Intocard() {
   };
 
   const handleInputChange = (e) => {
-    const inputValue = e.target.value;
-    // Ensure that inputValue is a positive number
-    if (/^\d+$/.test(inputValue) || inputValue === "") {
-      setInputValue(inputValue);
+    const input = e.target.value;
+    if (/^\d+$/.test(input) || input === "") {
+      setInputValue(input);
     }
   };
 

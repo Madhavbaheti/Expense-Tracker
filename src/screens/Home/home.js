@@ -7,6 +7,7 @@ import { setCurrentCard } from "../../slice";
 import "./home.css";
 import { fetchUserData,addUserCard,deleteCard } from "../../Api";
 import Button from "../../Components/Navbar/Button/Button";
+import backgroundImage from '../../images/backgroundimage.jpg'
 
 function Home() {
   const [showOverlay, setShowOverlay] = useState(false);
@@ -78,7 +79,10 @@ function Home() {
   }, []);
 
   return (
-    <div onClick={handleOutsideClick}>
+    <div onClick={handleOutsideClick} style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+    }}>
       <Navbar />
       {!localStorage.getItem("AuthToken") ? (
         <div>

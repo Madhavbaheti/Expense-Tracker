@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setCurrentEmail } from "../../slice";
 import "./login.css";
+import backgroundImage from '../../images/backgroundimage.jpg'
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -54,31 +55,37 @@ function Login() {
 
   return (
     <div>
-      <div className="login-container">
-        <div className="login-box">
-          <h2 className="login-heading">Login</h2>
-          <input
-            type="email"
-            placeholder="Email"
-            className="login-input"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-          />
-          <input
-            type="password"
-            placeholder="Password"
-            className="login-input"
-            value={password}
-            onChange={(e) => setPassword(e.target.value)}
-          />
-          <button className="login-button" onClick={handleLogin}>
-            Login
-          </button>
-          <p className="signup-link">
-            New user? <Link to="/signup">Sign up</Link>
-          </p>
-        </div>
-      </div>
+      <div className="login-container" style={{
+  backgroundImage: `url(${backgroundImage})`,
+  backgroundSize: 'cover',
+}}>
+  <div className="login-box">
+    <h2 className="login-heading">Login</h2>
+    <form onSubmit={handleLogin}>
+      <input
+        type="email"
+        placeholder="Email"
+        className="login-input"
+        value={email}
+        onChange={(e) => setEmail(e.target.value)}
+      />
+      <input
+        type="password"
+        placeholder="Password"
+        className="login-input"
+        value={password}
+        onChange={(e) => setPassword(e.target.value)}
+      />
+      <button type="submit" className="login-button">
+        Login
+      </button>
+    </form>
+    <p className="signup-link">
+      New user? <Link to="/signup">Sign up</Link>
+    </p>
+  </div>
+</div>
+
     </div>
   );
 }

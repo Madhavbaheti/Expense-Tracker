@@ -10,29 +10,30 @@ const jwtsecret = "MynameisMadhavBaheti"
 
 
 
-router.post("/api/signup",async(req,res) => {
-   const errors = validationResult(req);
-  if(!errors.isEmpty()) {
-    return res.status(400).json({errors: errors.array()});
+router.post("/api/signup", async (req, res) => {
+  const errors = validationResult(req);
+  if (!errors.isEmpty()) {
+    return res.status(400).json({ errors: errors.array() });
   }
-  const email = req.body.email
-    try {
-        const useremail = Users.findOne({email})
-        if(!useremail) {
-        await Users.create({
-            "username": req.body.username,
-            "email": req.body.email,
-            "password": req.body.password
-        })
-        res.json({success: "true"});
+  const email = req.body.email;
+  const password = req.body.password;
+  const username = req.body.username;
+  try {
+    const useremail = await Users.findOne({ email });
+    if (!useremail) {
+      await Users.create({
+        username: username,
+        email: email,
+        password: password,
+      });
+      res.json({ success: "true" });
+    } else {
+      alert("Email already used");
     }
-    else {
-        alert("Email already used");
-    }
-    }catch(err) {
-        console.log("error in creating user");
-        res.json({success:"False"});
-    }
+  } catch (err) {
+    console.log("error in creating user");
+    res.json({ success: "False" });
+  }
 });
 
 

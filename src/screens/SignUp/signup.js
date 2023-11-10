@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import "./signup.css";
+import backgroundImage from '../../images/backgroundimage.jpg'
+
+
 
 function SignupPage() {
   const [info,SetInfo] = useState({
@@ -45,7 +48,10 @@ function SignupPage() {
 
   
   return (
-    <div className="signup-container">
+    <div className="signup-container" style={{
+      backgroundImage: `url(${backgroundImage})`,
+      backgroundSize: 'cover',
+    }}>
       <div className="signup-box">
         <form onSubmit={HandleSubmit}>
         <h2 className="signup-heading">Sign Up</h2>
